@@ -1,0 +1,420 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+
+
+}
+body{
+    margin: 0;
+}
+img{
+    width: 150px;
+    height: 130px;
+    border-radius: 5px;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.2rem;
+    text-align: center;
+}
+a{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+[class*="col-"]{
+    width: 100%;
+}
+/* Navbar Digane start */
+.navbar{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+    
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.navbar-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px 0px ;
+    padding: 10px;
+}
+.navbar-menu a:hover{
+    background-color: gray;
+}
+/* naver desgin end  */
+/* Profile design Start */
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile .weather-top{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 2s;
+}
+.profile .weather-top:hover{
+    transform: rotate(360deg);
+}
+.profile-dic h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+.profile-dic p{
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+.profile .weather-button{
+    position: absolute;
+    left:  60px;
+    bottom: 10px;
+    transition: transform 2s;
+}
+.profile .weather-button:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+/* Profile design End */
+/* about me section start */
+.aboutme{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+.aboutme::after{
+    display: table;
+    clear: both;
+    content: '';
+}
+.aboutme-image img{
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+.aboutme p{
+    text-align: center;
+}
+.aboutme a {
+    font-size: 1.2rem;
+}
+.cv-button{
+    background-color: #052d2f ;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+/* about me section end */
+/* professional experience start here */
+.pro-exp{
+    padding: 1% 0%;
+
+}
+.pro-exp .card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 700px;
+
+}
+.pro-exp .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img {
+    margin-top: 20px;
+    width: 100px;
+}
+.round-img{
+    border: 5px solid rgb(5, 5, 5);
+    border-radius: 50px;
+    padding: 15px;
+}
+.card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.card-desc{
+    padding: 5px;
+}
+.pro-exp::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+/* professional experience end here */
+.skill-con{
+    padding: 5px;
+}
+.skill-con li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 5px;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+.skill-con li::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(86,86,153,.5);
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    border-radius: 1000px;
+    left: 0;
+}
+
+.skill-con li::after{
+    content: '';
+    position: absolute;
+    
+    top: calc(100% + 5px);
+    left: 0;
+    width: 0px;
+    height: 10px;
+    background-color: rgb(86,86,153);
+    border-radius: 1000px;
+    
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+}
+.skill-con li.html::after{
+    animation-name: html;
+    
+
+}
+@keyframes html {
+    to{
+        width: 90%;
+    }
+    
+    
+}
+.skill-con li.css::after{
+    animation-name: css;
+    
+
+}
+@keyframes css {
+    to{
+        width: 95%;
+    }
+    
+    
+}
+.skill-con li.bs::after{
+    animation-name: bs;
+    
+
+}
+@keyframes bs {
+    to{
+        width: 80%;
+    }
+    
+    
+}
+.skill-con li.js::after{
+    animation-name: js;
+    
+
+}
+@keyframes js {
+    to{
+        width: 65%;
+    }
+    
+    
+}
+.skill-con li.jq::after{
+    animation-name: jq;
+    
+
+}
+@keyframes jq {
+    to{
+        width: 60%;
+    }
+    
+    
+}
+.skill-con li.php::after{
+    animation-name: php;
+    
+
+}
+@keyframes php {
+    to{
+        width: 75%;
+    }
+    
+    
+}
+.skill-con li.sql::after{
+    animation-name: sql;
+    
+
+}
+@keyframes sql {
+    to{
+        width: 67%;
+    }
+    
+    
+}
+.skill-con li.git::after{
+    animation-name: git;
+    
+
+}
+@keyframes git {
+    to{
+        width: 40%;
+    }
+    
+    
+}
+.skill-con li.lar::after{
+    animation-name: lar;
+    
+
+}
+@keyframes lar {
+    to{
+        width: 25%;
+    }
+    
+    
+}
+
+.acv-con{
+    padding: 1% 7%;
+    background-color: #39a4ac;
+    color: white;
+}
+.acv-link{
+    text-align: center;
+
+}
+.btn-con button{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    font-size: 32px;
+}
+.btn-con button:hover{
+    background-color: gray;
+}
+
+.acv-con::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.acv-contac{
+    padding: 1% 7%;
+    text-align: center;
+}
+.acv-contac input, textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.acv-contac button{
+    border: none;
+    border-radius: 12px;
+    background-color: #052d2f;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.footer-menu a{
+    display: block;
+    padding: 10px 0;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer-menu a:hover{
+    
+    background-color: gray;
+   
+}
+.footer::after{
+    clear: both;
+    display: table;
+    content: '';
+}
